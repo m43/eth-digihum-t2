@@ -179,7 +179,9 @@ To cancel a job, use its JOBID found via `squeue` and run `scancel JOBID` (e.g.,
 
 Every individual user is provided 10GB of disk space in their home folder `/home/login_name`. The usage of the space is printed after logging in to the cluster, e.g., as `Your home has 1124MB free space of 10000MB total`. You can use your home folder to setup your environment (e.g., via conda), store your code, logs, and data.
 
-In case you need more space for downloading datasets, store large model checkpoints, etc., you can use the shared space in `/cluster/courses/digital_humans/datasets`. To use the space, create a separate folder for your team, e.g. `/cluster/courses/digital_humans/datasets/team_123`. We have reserved 1TB of shared space for the course. Please be considerate with your space usage, e.g., using 50GB per team should be safe and feasible. We will let you know if you use too much space, don't worry about it too much. If you need much more disk space, reach out to Frano.
+In case you need more space for downloading datasets, store large model checkpoints, etc., you can use the shared space in `/cluster/courses/digital_humans/datasets`. To use the space, create a separate folder for your team, e.g. `/cluster/courses/digital_humans/datasets/team_123`. We have reserved 1TB of shared space for the course. Please be considerate with your space usage, e.g., using 75GB per team should be safe and feasible. We will let you know if you use too much space, don't worry about it too much. If you need much more disk space, reach out to Frano.
+
+**Note:** If your data or models are pulled via `git` and `git-lfs` and you do not plan to modify them or commit your modifications, you can use the `lfs-hardlink` command available on the student cluster to hard-link the LFS objects and save *half* of the space. Check the script by running `cat /usr/local/bin/lfs-hardlink` for more details.
 
 ## 8. Useful Command Tools
 
